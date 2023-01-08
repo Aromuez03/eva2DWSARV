@@ -1,0 +1,73 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Listado de evaluaciones";
+}
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body class="body">
+    <h2 style="text-align:center">Consulta Empleado</h2>
+
+    <form method="post" id="myForm1">
+        <div class="letters">
+            <br /><br />
+
+            <div class="form-group row">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-4 col-form-label">Buscar alumno por su codigo</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-4">
+                    <input class="form-control" id="codAlumno" name="codAlumno" placeholder="Alfonso" required>
+                </div>
+            </div>
+
+            <br />
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-primary" asp-page-handler="CodAlumno">Buscar</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <form method="post" id="myForm2">
+        <div class="letters">
+            <br /><br />
+
+            <div class="form-group row">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-4 col-form-label">Buscar alumno/s por el Código de Evaulación</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4 col-form-label"></div>
+                <div class="col-sm-4">
+                    <select class="form-control" id="codEvalu" name="codEvalu" required>
+                        <option>PR</option>
+                        <option>SG</option>
+                        <option>TC</option>
+                    </select>
+                </div>
+            </div>
+
+            <br />
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label"></label>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-primary" asp-page-handler="CodEvalu">Buscar</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+
+</body>
+

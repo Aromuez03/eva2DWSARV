@@ -1,0 +1,18 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Registro Evaluativo";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="text" name="nombreAlumno" placeholder="Alfonso" maxlength="15" required />
+    <input type="number" name="notaAlumno" placeholder="0-10" required />
+    @*<input type="text" name="" placeholder="Introduce PR = primera,SG = segunda,TC = tercera" maxlength="2" required />*@
+    <select name="evaluacion" required>
+        <option value="PR">Primera</option>
+        <option value="SG">Segunda</option>
+        <option value="TC">Tercera</option>
+    </select>
+    <button type="submit" class="button" asp-page-handler="RegEvaluacion">Enviar</button>
+</form>
